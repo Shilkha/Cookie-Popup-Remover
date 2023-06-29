@@ -24,5 +24,11 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
         // Increment the popup count and store it in storage
         blockedPopupCount++;
         chrome.storage.sync.set({ blockedPopupCount: blockedPopupCount });
+    } else if (message.resetPopupCount) {
+        blockedPopupCount = 0;
+        chrome.storage.sync.set({ blockedPopupCount: blockedPopupCount }, function() {
+            // Send a message to the popup indicating that the count has been reset
+            chrome.runtime.sendMessage({ countResetComplete: true });
+        });
     }
 });

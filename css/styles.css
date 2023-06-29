@@ -11,6 +11,14 @@ h1 {
     font-weight: bold;
 }
 
+.resetButton{
+    background-color: black;
+    font-weight: bold;
+    color:white;
+    border: transparent;
+    cursor: pointer;
+}
+
 #toggleSwitch {
     display: none;
 }
