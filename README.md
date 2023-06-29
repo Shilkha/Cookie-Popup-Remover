@@ -1,2 +1,2 @@
-# NCP
-Extension that checks if there is a cookie popup , if found it removes it.
+# CPR - Cookie Popup Remover
+A Chrome extension to remove cookie popups
